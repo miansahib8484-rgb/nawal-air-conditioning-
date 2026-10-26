@@ -1,16 +1,23 @@
 HOW TO USE
-1. Open index.html (choose English or Arabic). Or open en/index.html or ar/index.html directly.
-2. Keep all folders together: en/, ar/, assets/.
+This site uses clean links (no .html), for example /en/services/ac-repair.
+- Publish on Vercel: drag this whole folder into a new Vercel project (Framework: Other, no build command, output = this folder).
+  vercel.json is included: it turns on clean URLs, sends Arabic browsers to /ar/ and everyone else to /en/,
+  and adds basic security and caching headers.
+- Preview on your computer: double-clicking the files will NOT work with clean links. Run "npx serve ." inside this folder
+  and open the address it shows.
+- Keep all folders together: en/, ar/, assets/, vercel.json.
 
 BEFORE YOU PUBLISH
   Phone/WhatsApp (+966507632925) and the business name are already set.
-  Arabic name used: شركة نوال لتكييف الهواء بالرياض  -> check it and change it if you prefer another spelling.
-  https://www.example.com -> your real domain (find & replace in ALL files: canonical, hreflang, sitemap.xml, robots.txt)
+  Arabic name used: شركة نوال لتكييف الهواء والصيانة بالرياض  -> check it and change it if you prefer another spelling.
+  Domain set to https://www.nawalrepair-maintenanceriyadh.com (canonical, hreflang, sitemap.xml, robots.txt). Change SITE_URL in the generator if it ever changes.
 
 PICTURES
-- All pictures are original illustrations in assets/img/ (hero.svg, about.svg, request.svg, skyline.svg, service-*.svg).
-- To use your own real photos: save the photo (e.g. hero.jpg) in assets/img/, then find & replace "hero.svg" with "hero.jpg"
-  in all HTML files (same for the other pictures). Only use photos you own or have permission to use.
+- Real job photos are in assets/photos/ (shown on the home page, the Our Work page and some service pages).
+  Each photo has a full size file and a "-sm" thumbnail. To swap one, replace both files keeping the same names.
+- The illustrations in assets/img/ (hero, service cards, request section, skyline) are original artwork. To use a real photo
+  instead, save it (e.g. hero.jpg) in assets/img/ and find & replace "hero.svg" with "hero.jpg" in all HTML files.
+- Only use photos you own or have permission to use. Photo captions are in scripts/content/design.ts.
 
 REVIEWS
 - Open assets/reviews.js and add ONLY real customer reviews (name, rating, text, lang, date).
@@ -20,4 +27,4 @@ NOTES
 - The request form checks the fields, then opens WhatsApp with the message ready to send. It stores nothing.
 - Services are listed from the content written for you. Remove any you do not actually offer.
 - Privacy Policy and Terms are general drafts: have them reviewed before publishing.
-- To publish: upload this whole folder to any static host (Netlify, Vercel, GitHub Pages, cPanel).
+- Other hosts (Netlify, cPanel, GitHub Pages) need their own clean-URL setting; Vercel is the recommended host.
