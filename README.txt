@@ -15,8 +15,8 @@ BEFORE YOU PUBLISH
 PICTURES
 - Real job photos are in assets/photos/ (shown on the home page, the Our Work page and some service pages).
   Each photo has a full size file and a "-sm" thumbnail. To swap one, replace both files keeping the same names.
-- The illustrations in assets/img/ (hero, service cards, request section, skyline) are original artwork. To use a real photo
-  instead, save it (e.g. hero.jpg) in assets/img/ and find & replace "hero.svg" with "hero.jpg" in all HTML files.
+- Cards, the home hero, the request section and the call-to-action banner use cropped versions of these photos in assets/crops/.
+  To change one, replace the file keeping the same name and size (card-*.jpg 800x533, hero-a 720x900, hero-b/c 560x560, req 900x675, cta 1600x640).
 - Only use photos you own or have permission to use. Photo captions are in scripts/content/design.ts.
 
 REVIEWS
