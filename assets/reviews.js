@@ -20,7 +20,7 @@
 */
 
 // Your Google review link (optional). Shows a "Review us on Google" button when filled in.
-window.REVIEW_LINK = "";
+window.REVIEW_LINK = "https://maps.app.goo.gl/SYEy9PbNEs46GL8y8";
 
 window.REVIEWS = [
 ];
